@@ -14,6 +14,11 @@ app.use(express.json());
 
 connectdb;
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+}
+)
+
 app.post("/Create", (req, res) => {
   const { name, email, age } = req.body;
   const user = new Users({ name, email, age });
