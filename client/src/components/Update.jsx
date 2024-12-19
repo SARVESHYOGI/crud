@@ -13,7 +13,7 @@ function Update() {
 
 
   React.useEffect(() => {
-    axios.get(`http://localhost:3000/getuser/${id}`).then((res) => {
+    axios.get(`https://crud-6d2c.onrender.com/getuser/${id}`).then((res) => {
       console.log(res)
       setName(res.data.name)
       setEmail(res.data.email)
@@ -26,7 +26,7 @@ function Update() {
 
   const update = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3000/Update/${id}`, { name, email, age }).then((res) => {
+    await axios.put(`https://crud-6d2c.onrender.com/Update/${id}`, { name, email, age }).then((res) => {
       console.log(res)
     }).catch((err) => {
       console.log(err)

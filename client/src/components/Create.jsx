@@ -11,7 +11,7 @@ function Create() {
   const submit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:3000/Create', { name, email, age }).then((res) => {
+      await axios.post('https://crud-6d2c.onrender.com/Create', { name, email, age }).then((res) => {
         console.log(res)
       })
       navigate('/')

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function User() {
   const [data, setData] = React.useState([])
   React.useEffect(() => {
-    axios.get('http://localhost:3000/').then((res) => {
+    axios.get('https://crud-6d2c.onrender.com/').then((res) => {
       setData(res.data)
     }).catch((err) => {
       console.log(err)
@@ -13,7 +13,7 @@ function User() {
   }, [])
 
   const handeldelete = async (id) => {
-    await axios.delete(`http://localhost:3000/delete/${id}`).then((res) => {
+    await axios.delete(`https://crud-6d2c.onrender.com/delete/${id}`).then((res) => {
       console.log(res)
     }).catch((err) => {
       console.log(err)
